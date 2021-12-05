@@ -479,7 +479,8 @@ router.get<{ id: string }, QuotaResponse>(
       ) {
         return next({
           status: 403,
-          message: 'You do not have permission to access this endpoint.',
+          message:
+            "You do not have permission to view this user's request limits.",
         });
       }
 
@@ -505,7 +506,8 @@ router.get<{ id: string }, UserWatchHistoryResponse>(
     ) {
       return next({
         status: 403,
-        message: 'You do not have permission to access this endpoint.',
+        message:
+          "You do not have permission to view this user's watch history.",
       });
     }
 
