@@ -10,6 +10,7 @@ import { mapProductionCompany } from '../models/Movie';
 import { mapNetwork } from '../models/Tv';
 import { appDataPath, appDataStatus } from '../utils/appDataVolume';
 import { getAppVersion, getCommitTag } from '../utils/appVersion';
+import restartFlag from '../utils/restartFlag';
 import { isPerson } from '../utils/typeHelpers';
 import authRoutes from './auth';
 import collectionRoutes from './collection';
@@ -74,6 +75,7 @@ router.get<unknown, StatusResponse>('/status', async (req, res) => {
     commitTag: getCommitTag(),
     updateAvailable,
     commitsBehind,
+    restartRequired: restartFlag.isSet,
   });
 });
 

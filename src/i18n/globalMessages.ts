@@ -41,6 +41,7 @@ const globalMessages = defineMessages({
   all: 'All',
   experimental: 'Experimental',
   advanced: 'Advanced',
+  restartRequired: 'Restart Required',
   loading: 'Loading…',
   settings: 'Settings',
   usersettings: 'User Settings',

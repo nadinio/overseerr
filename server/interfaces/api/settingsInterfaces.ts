@@ -54,4 +54,5 @@ export interface StatusResponse {
   commitTag: string;
   updateAvailable: boolean;
   commitsBehind: number;
+  restartRequired: boolean;
 }
